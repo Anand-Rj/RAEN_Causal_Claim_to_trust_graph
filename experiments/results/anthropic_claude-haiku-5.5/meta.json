@@ -1,0 +1,82 @@
+{
+ "banner": "LLM:anthropic/claude-haiku-5.5 | profiles:measured",
+ "design": {
+  "R_spec": 0.92,
+  "R_near": 0.75,
+  "R_unrel": 0.55,
+  "persist_same": 0.35,
+  "persist_near": 0.1,
+  "oos_drop": 0.15,
+  "c_verify": 0.08,
+  "c_reroute": 0.05,
+  "q_verify": 0.7,
+  "R_alt": 0.87,
+  "tau": 0.1
+ },
+ "profiles_source": "measured",
+ "model": "anthropic/claude-haiku-5.5",
+ "usage": {
+  "supervisor_seed0": {
+   "calls": 8000,
+   "cached": 8000,
+   "prompt_tokens": 7123801,
+   "completion_tokens": 3902423,
+   "latency": 215862.81999999634
+  },
+  "provenance_seed0": {
+   "calls": 800,
+   "cached": 800,
+   "prompt_tokens": 485128,
+   "completion_tokens": 322021,
+   "latency": 2212.660999999998
+  },
+  "supervisor_seed1": {
+   "calls": 8000,
+   "cached": 4123,
+   "prompt_tokens": 7123801,
+   "completion_tokens": 3797675,
+   "latency": 27071.738000000107
+  },
+  "provenance_seed1": {
+   "calls": 800,
+   "cached": 0,
+   "prompt_tokens": 485128,
+   "completion_tokens": 325584,
+   "latency": 2260.100000000001
+  },
+  "supervisor_seed2": {
+   "calls": 8000,
+   "cached": 2426,
+   "prompt_tokens": 7123801,
+   "completion_tokens": 3889390,
+   "latency": 27756.60800000054
+  },
+  "provenance_seed2": {
+   "calls": 800,
+   "cached": 0,
+   "prompt_tokens": 485128,
+   "completion_tokens": 326179,
+   "latency": 2154.3829999999975
+  }
+ },
+ "args": {
+  "backend": "openrouter",
+  "model": "anthropic/claude-haiku-5.5",
+  "gsm_path": "gsm8k_test.jsonl",
+  "n_gsm": 50,
+  "n_tool": 50,
+  "n_hotpot": 50,
+  "n_fever": 50,
+  "seeds": 3,
+  "temperature": 0.7,
+  "train_frac": 0.6,
+  "dev_frac": 0.2,
+  "workers": 32,
+  "profiles": "calib_anthropic_claude-haiku-5.5/profiles.json",
+  "probe_answers": "calib_anthropic_claude-haiku-5.5/probe_answers.json",
+  "live_transcripts": true,
+  "provenance": true,
+  "out": "out_anthropic_claude-haiku-5.5",
+  "dry_run": false
+ }
+}

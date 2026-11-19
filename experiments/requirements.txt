@@ -1,0 +1,5 @@
+numpy
+pandas
+scipy
+matplotlib
+datasets   # only needed for --n-hotpot / --n-fever

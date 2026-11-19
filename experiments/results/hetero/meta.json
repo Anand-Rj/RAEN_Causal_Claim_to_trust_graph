@@ -1,0 +1,82 @@
+{
+ "banner": "LLM:openai/gpt-4o-mini | profiles:measured",
+ "design": {
+  "R_spec": 0.92,
+  "R_near": 0.75,
+  "R_unrel": 0.55,
+  "persist_same": 0.35,
+  "persist_near": 0.1,
+  "oos_drop": 0.15,
+  "c_verify": 0.08,
+  "c_reroute": 0.05,
+  "q_verify": 0.7,
+  "R_alt": 0.87,
+  "tau": 0.1
+ },
+ "profiles_source": "measured",
+ "model": "openai/gpt-4o-mini",
+ "usage": {
+  "supervisor_seed0": {
+   "calls": 8000,
+   "cached": 2365,
+   "prompt_tokens": 4665234,
+   "completion_tokens": 518687,
+   "latency": 17255.721999999674
+  },
+  "provenance_seed0": {
+   "calls": 800,
+   "cached": 0,
+   "prompt_tokens": 302484,
+   "completion_tokens": 81791,
+   "latency": 12496.072000000006
+  },
+  "supervisor_seed1": {
+   "calls": 8000,
+   "cached": 2363,
+   "prompt_tokens": 4665234,
+   "completion_tokens": 517936,
+   "latency": 17458.303999999593
+  },
+  "provenance_seed1": {
+   "calls": 800,
+   "cached": 0,
+   "prompt_tokens": 302484,
+   "completion_tokens": 81187,
+   "latency": 2044.4150000000009
+  },
+  "supervisor_seed2": {
+   "calls": 8000,
+   "cached": 2365,
+   "prompt_tokens": 4665234,
+   "completion_tokens": 520412,
+   "latency": 173130.8950000008
+  },
+  "provenance_seed2": {
+   "calls": 800,
+   "cached": 0,
+   "prompt_tokens": 302484,
+   "completion_tokens": 81434,
+   "latency": 1963.8220000000001
+  }
+ },
+ "args": {
+  "backend": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "gsm_path": "gsm8k_test.jsonl",
+  "n_gsm": 50,
+  "n_tool": 50,
+  "n_hotpot": 50,
+  "n_fever": 50,
+  "seeds": 3,
+  "temperature": 0.7,
+  "train_frac": 0.6,
+  "dev_frac": 0.2,
+  "workers": 32,
+  "profiles": "calib_hetero/profiles.json",
+  "probe_answers": "calib_hetero/probe_answers.json",
+  "live_transcripts": true,
+  "provenance": true,
+  "out": "out_hetero",
+  "dry_run": false
+ }
+}
