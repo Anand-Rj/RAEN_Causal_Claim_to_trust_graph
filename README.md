@@ -4,6 +4,10 @@
 
 **Calibrating long-horizon trust in LLM subagents from claim-level failure provenance.**
 
+![python](https://img.shields.io/badge/python-3.12-3776AB)
+![license](https://img.shields.io/badge/license-Apache--2.0-green)
+
+
 </div>
 
 When a supervisor LLM rejects a subagent's recommendation, the same wrong answer can come from missing
