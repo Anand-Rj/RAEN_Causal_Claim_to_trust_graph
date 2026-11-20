@@ -55,12 +55,14 @@ experiments/               code, calibration profiles and result summaries
   selftest.py              offline plumbing test with a mock LLM
   results/<run>/           results_test.md, case_studies_test.md, meta.json, figures
   calibration/<run>/       measured reliability profiles
-docs/paper/                anonymized paper source (AAAI style), figures, references
+data/<run>/                per-episode results, episodes, transcripts, response caches, calibration/provenance files
+analysis/                  reproduce_paper_tables.py and helpers (no API calls)
+prompts/                   exact supervisor prompts per memory condition and cause
 ```
 
-See [`experiments/README.md`](experiments/README.md) for the run order. Raw per-episode CSVs and response
-caches are large and are not committed; the committed summaries regenerate the paper tables via
-`analyze.py` when the CSVs are present.
+See [`REPRODUCE.md`](REPRODUCE.md) to regenerate the paper's tables from the released data without API calls, and
+[`experiments/README.md`](experiments/README.md) for the run order of new experiments. The four runs' per-episode results,
+transcripts and response caches are in `data/`.
 
 ## Notes and limitations
 

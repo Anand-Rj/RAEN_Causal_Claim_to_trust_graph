@@ -1,0 +1,546 @@
+{
+ "source": "measured",
+ "model": "openai/gpt-4o-mini",
+ "models": {
+  "fact_agent": "openai/gpt-4o-mini",
+  "multihop_agent": "openai/gpt-4o-mini",
+  "quant_agent": "openai/gpt-4o-mini",
+  "tool_agent": "openai/gpt-4o-mini"
+ },
+ "n_cal": 40,
+ "n_probe": 40,
+ "pre": {
+  "fact_agent": {
+   "fact": 0.875,
+   "multihop": 0.525,
+   "quant": 0.55,
+   "tool": 0.7
+  },
+  "multihop_agent": {
+   "fact": 0.65,
+   "multihop": 0.65,
+   "quant": 0.45,
+   "tool": 0.7
+  },
+  "quant_agent": {
+   "fact": 0.675,
+   "multihop": 0.55,
+   "quant": 0.875,
+   "tool": 0.85
+  },
+  "tool_agent": {
+   "fact": 0.725,
+   "multihop": 0.3,
+   "quant": 0.55,
+   "tool": 1.0
+  }
+ },
+ "pre_ci95": {
+  "fact_agent": {
+   "fact": [
+    0.739,
+    0.945
+   ],
+   "multihop": [
+    0.375,
+    0.671
+   ],
+   "quant": [
+    0.398,
+    0.693
+   ],
+   "tool": [
+    0.546,
+    0.819
+   ]
+  },
+  "multihop_agent": {
+   "fact": [
+    0.495,
+    0.779
+   ],
+   "multihop": [
+    0.495,
+    0.779
+   ],
+   "quant": [
+    0.307,
+    0.602
+   ],
+   "tool": [
+    0.546,
+    0.819
+   ]
+  },
+  "quant_agent": {
+   "fact": [
+    0.52,
+    0.799
+   ],
+   "multihop": [
+    0.398,
+    0.693
+   ],
+   "quant": [
+    0.739,
+    0.945
+   ],
+   "tool": [
+    0.709,
+    0.929
+   ]
+  },
+  "tool_agent": {
+   "fact": [
+    0.572,
+    0.839
+   ],
+   "multihop": [
+    0.181,
+    0.454
+   ],
+   "quant": [
+    0.398,
+    0.693
+   ],
+   "tool": [
+    0.912,
+    1.0
+   ]
+  }
+ },
+ "post": {
+  "missing_context": {
+   "fact_agent": {
+    "fact": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    }
+   },
+   "multihop_agent": {
+    "fact": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    }
+   },
+   "quant_agent": {
+    "fact": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "multihop": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "quant": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "tool": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    }
+   },
+   "tool_agent": {
+    "fact": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "multihop": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "quant": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "tool": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    }
+   }
+  },
+  "tool_failure": {
+   "fact_agent": {
+    "fact": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    }
+   },
+   "multihop_agent": {
+    "fact": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    }
+   },
+   "quant_agent": {
+    "fact": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "multihop": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "quant": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "tool": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    }
+   },
+   "tool_agent": {
+    "fact": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "multihop": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "quant": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "tool": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    }
+   }
+  },
+  "out_of_specialty": {
+   "fact_agent": {
+    "fact": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.875,
+     "multihop": 0.375,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.4,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.5499999999999999
+    }
+   },
+   "multihop_agent": {
+    "fact": {
+     "fact": 0.5,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.30000000000000004,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.5499999999999999
+    }
+   },
+   "quant_agent": {
+    "fact": {
+     "fact": 0.525,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "multihop": {
+     "fact": 0.675,
+     "multihop": 0.4,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "quant": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "tool": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.7
+    }
+   },
+   "tool_agent": {
+    "fact": {
+     "fact": 0.575,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "multihop": {
+     "fact": 0.725,
+     "multihop": 0.15,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "quant": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.4,
+     "tool": 1.0
+    },
+    "tool": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    }
+   }
+  },
+  "persistent_reasoning": {
+   "fact_agent": {
+    "fact": {
+     "fact": 0.5,
+     "multihop": 0.44999999999999996,
+     "quant": 0.6000000000000001,
+     "tool": 0.6
+    },
+    "multihop": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "quant": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.875,
+     "multihop": 0.525,
+     "quant": 0.55,
+     "tool": 0.7
+    }
+   },
+   "multihop_agent": {
+    "fact": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "multihop": {
+     "fact": 0.65,
+     "multihop": 0.45000000000000007,
+     "quant": 0.35000000000000003,
+     "tool": 0.875
+    },
+    "quant": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    },
+    "tool": {
+     "fact": 0.65,
+     "multihop": 0.65,
+     "quant": 0.45,
+     "tool": 0.7
+    }
+   },
+   "quant_agent": {
+    "fact": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "multihop": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    },
+    "quant": {
+     "fact": 0.7750000000000001,
+     "multihop": 0.4,
+     "quant": 0.55,
+     "tool": 0.7749999999999999
+    },
+    "tool": {
+     "fact": 0.675,
+     "multihop": 0.55,
+     "quant": 0.875,
+     "tool": 0.85
+    }
+   },
+   "tool_agent": {
+    "fact": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "multihop": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "quant": {
+     "fact": 0.725,
+     "multihop": 0.3,
+     "quant": 0.55,
+     "tool": 1.0
+    },
+    "tool": {
+     "fact": 0.625,
+     "multihop": 0.39999999999999997,
+     "quant": 0.45000000000000007,
+     "tool": 0.5750000000000001
+    }
+   }
+  }
+ },
+ "corruption": {
+  "spec": 0.0,
+  "near": 0.08,
+  "unrel": 0.3,
+  "persist_same": 0.4,
+  "persist_near": 0.1
+ },
+ "oos_drop": 0.15
+}

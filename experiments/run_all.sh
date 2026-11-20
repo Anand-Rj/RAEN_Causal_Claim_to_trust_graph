@@ -2,8 +2,8 @@
 # Full manuscript experiment for several model families + heterogeneous team. Edit MODELS to valid OpenRouter slugs (openrouter.ai/models).
 set -euo pipefail
 : "${OPENROUTER_API_KEY:?export OPENROUTER_API_KEY first}"
-MODELS=("openai/gpt-4o-mini" "anthropic/claude-3.5-haiku" "meta-llama/llama-3.3-70b-instruct")   # primary = first
-HETERO="quant_agent=openai/gpt-4o-mini,fact_agent=anthropic/claude-3.5-haiku,multihop_agent=meta-llama/llama-3.3-70b-instruct,tool_agent=openai/gpt-4o-mini"
+MODELS=("openai/gpt-4o-mini" "anthropic/claude-haiku-5.5" "meta-llama/llama-3.3-70b-instruct")   # exact OpenRouter slugs used in the paper (primary = first)
+HETERO="quant_agent=openai/gpt-4o-mini,fact_agent=anthropic/claude-haiku-5.5,multihop_agent=meta-llama/llama-3.3-70b-instruct,tool_agent=openai/gpt-4o-mini"
 COMMON="--n-gsm 50 --n-tool 50 --n-hotpot 50 --n-fever 50 --seeds 3 --temperature 0.7 --live-transcripts --provenance"
 python check_data.py --ping --model "${MODELS[0]}"
 DIRS=()

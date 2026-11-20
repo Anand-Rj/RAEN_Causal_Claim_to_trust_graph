@@ -1,0 +1,22 @@
+{
+ "missing_context": {
+  "same": 0.0,
+  "near": 0.0,
+  "unrel": 0.0
+ },
+ "tool_failure": {
+  "same": 0.0,
+  "near": 0.0,
+  "unrel": 0.0
+ },
+ "out_of_specialty": {
+  "same": -0.15000000000000005,
+  "near": 0.0,
+  "unrel": 0.0
+ },
+ "persistent_reasoning": {
+  "same": -0.33125,
+  "near": -0.06250000000000003,
+  "unrel": -0.0031249999999999997
+ }
+}
